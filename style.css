@@ -1,0 +1,27 @@
+body, html { 
+    width: 99%;
+    height: 99%;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#encrypted-packge{
+    height: 30px;
+    width:300px;
+    margin-bottom: 15px;
+}
+#submit{
+    height: 40px;
+    width:120px;
+    padding:0px;
+    background-color:greenyellow;
+    font-size: 20px;
+    border-radius: 8px;
+    font-family: 'Koulen', cursive;
+    color: rgb(0, 0, 0);
+}
