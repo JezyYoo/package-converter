@@ -32,3 +32,14 @@ button#submit:hover {
     background: rgb(212, 255, 112);
   }
 
+.info-text{
+    display: none;
+    font-family: 'Koulen', cursive;
+    color:rgb(250, 187, 71);
+    background:rgb(71, 70, 70);
+    margin-bottom:15px;
+    border-radius: 8px;
+    padding:0px 10px;
+    font-size: 19px;
+  }
+

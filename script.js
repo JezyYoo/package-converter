@@ -1,16 +1,20 @@
 var encryptedValue = "";
 var decryptedValue= "";
-
+const encrField = $("#encrypted-packge");
+const infoText = $(".info-text")
 $("#submit").on("click", ()=>{
-    const encrField = $("#encrypted-packge");
+
     encryptedValue = encrField.val();
     decryptedValue = encryptedValue.replace(/([\])}[{(])/g, '');
     encrField.val(decryptedValue);
     window.navigator.clipboard.writeText(decryptedValue);
     encrField.css("border","2px solid green");
+    infoText.css("display","block");
+    setTimeout(clearInfo,3000)
 })
 
-$("#submit").on("change", ()=>{
-    $("#encrypted-packge").css("border","2px solid black");
-})
+var clearInfo = ()=>{
+    encrField.css("border","2px solid black");
+    infoText.css("display","none");
+}
 
