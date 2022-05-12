@@ -2,17 +2,15 @@ var encryptedValue = "";
 var decryptedValue= "";
 
 $("#submit").on("click", ()=>{
-    encryptedValue = $("#encrypted-packge").val();
+    const encrField = $("#encrypted-packge");
+    encryptedValue = encrField.val();
     decryptedValue = encryptedValue.replace(/([\])}[{(])/g, '');
-    $("#encrypted-packge").val(decryptedValue);
-    window.navigator.clipboard.writeText(decryptedValue)
+    encrField.val(decryptedValue);
+    window.navigator.clipboard.writeText(decryptedValue);
+    encrField.css("border","2px solid green");
 })
 
-function copytext(el) {
-    var $tmp = $("<input>");
-    $("body").append($tmp);
-    $tmp.val($(el).text()).select();
-    console.log($(el).text())
-    // document.execCommand("copy");
-    $tmp.remove();
-}
+$("#submit").on("change", ()=>{
+    $("#encrypted-packge").css("border","2px solid black");
+})
+
